@@ -4,8 +4,85 @@
   <meta charset="UTF-8">
   <title>Portfolio - Amit Nandi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #007bff, #0056b3);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header .headingStatement {
+      margin: 0;
+      font-weight: 700;
+    }
+    nav.navbar {
+      margin-bottom: 0;
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav .navbar-nav > li > a {
+      color: #333;
+      font-weight: 500;
+    }
+    nav .navbar-nav > li > a:hover {
+      color: #007bff;
+    }
+    section {
+      padding: 3rem 1rem;
+      background: #fff;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      font-weight: 700;
+      color: #0056b3;
+      margin-bottom: 1rem;
+    }
+    section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    section ul li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    section ul li::before {
+      content: '\2022';
+      color: #007bff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .btn {
+      margin: 0.2rem;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -83,7 +160,7 @@
 <section id="contact" class="container">
   <h2>Contact</h2>
   <ul class="list-inline">
-    <li><a href="https://www.linkedin.com/in/anandi1989" target="_blank" class="btn btn-primary"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a href="https://www.linkedin.com/in/anandi89" target="_blank" class="btn btn-primary"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
     <li><a href="https://github.com/anandi1989" target="_blank" class="btn btn-dark"><i class="fa fa-github"></i> GitHub</a></li>
     <li><a href="mailto:amit.nandi[at]example[dot]com" class="btn btn-info"><i class="fa fa-envelope"></i> Email</a></li>
   </ul>
