@@ -1,176 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio - Amit Nandi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: linear-gradient(to right, #007bff, #0056b3);
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    header .headingStatement {
-      margin: 0;
-      font-weight: 700;
-    }
-    nav.navbar {
-      margin-bottom: 0;
-      border: none;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    nav .navbar-nav > li > a {
-      color: #333;
-      font-weight: 500;
-    }
-    nav .navbar-nav > li > a:hover {
-      color: #007bff;
-    }
-    section {
-      padding: 3rem 1rem;
-      background: #fff;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    section h2 {
-      font-weight: 700;
-      color: #0056b3;
-      margin-bottom: 1rem;
-    }
-    section ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    section ul li {
-      margin-bottom: 0.8rem;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-    section ul li::before {
-      content: '\2022';
-      color: #007bff;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
-    }
-    .btn {
-      margin: 0.2rem;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-      border-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Nandi | Notes & Applied AI Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        zinc: {
+                            50: '#fafafa',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            900: '#18181b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f4ee;
+            color: #24211d;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            filter: sepia(0.08);
+        }
+        ::selection {
+            background-color: #24211d;
+            color: #f7f4ee;
+        }
+        .minimal-link {
+            position: relative;
+            text-decoration: none;
+        }
+        .minimal-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .minimal-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
 </head>
-<body>
-<header>
-  <div class="text-center">
-    <h1 class="headingStatement">Amit Nandi</h1>
-    <h2 class="text-center headingStatement">AI/ML Specialist & Innovation Enthusiast</h2>
-  </div>
-</header>
+<body class="font-sans min-h-screen flex flex-col selection:bg-zinc-900 selection:text-white">
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarMenu">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="nav navbar-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#activities">Extracurriculars</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Navigation -->
+    <nav class="w-full">
+        <div class="max-w-2xl mx-auto px-6 py-12 flex items-center justify-between">
+            <a href="#" class="font-medium tracking-tight text-zinc-900 hover:opacity-70 transition-opacity">Amit Nandi</a>
+            <div class="flex gap-6 text-sm font-medium text-zinc-500">
+                <a href="#about" class="hover:text-zinc-900 transition-colors">About</a>
+                <a href="#writing" class="hover:text-zinc-900 transition-colors">Writing</a>
+                <a href="#notes" class="hover:text-zinc-900 transition-colors">Notes</a>
+            </div>
+        </div>
+    </nav>
 
-<section id="about" class="container">
-  <h2>About</h2>
-  <p>
-    Hello! I'm Amit Nandi, currently working as a Data Science Manager at PwC US in Bangalore. My primary responsibility is to lead AI/ML strategy, manage dynamic teams, and deliver scalable, impactful solutions that drive innovation and create business value.
-  </p>
-  <p>
-    With over a decade of experience, I am deeply committed to leveraging technology to solve complex problems, foster team growth, and deliver long-term value. I believe in an innovation-first approach, blending cutting-edge techniques with practical implementation.
-  </p>
-</section>
+    <main class="flex-grow max-w-2xl mx-auto px-6 w-full">
+        <!-- Hero / Intro Header -->
+        <header class="pt-12 pb-20">
+            <h1 class="text-2xl md:text-3xl font-normal tracking-tight text-zinc-900 leading-relaxed max-w-xl">
+                Exploring the space between theoretical machine learning and production system design. 
+            </h1>
+            <p class="mt-6 text-zinc-500 text-base leading-relaxed max-w-xl">
+                Currently studying personalization, agentic workflows, and real-time ranking at Verizon. On weekends, I experiment with noisy financial signals on <span class="italic font-serif text-zinc-800">Numerai</span> and <span class="italic font-serif text-zinc-800">CrunchDAO</span>.
+            </p>
+            <div class="mt-8 flex gap-6 text-sm font-medium">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="minimal-link text-zinc-900 flex items-center gap-1">
+                    GitHub <span class="text-zinc-400 font-normal">↗</span>
+                </a>
+                <a href="https://linkedin.com/in/anandi1989" target="_blank" rel="noopener noreferrer" class="minimal-link text-zinc-900 flex items-center gap-1">
+                    LinkedIn <span class="text-zinc-400 font-normal">↗</span>
+                </a>
+                <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="minimal-link text-zinc-900 flex items-center gap-1">
+                    Kaggle <span class="text-zinc-400 font-normal">↗</span>
+                </a>
+            </div>
+        </header>
 
-<section id="expertise" class="container">
-  <h2>Expertise</h2>
-  <ul>
-    <li><strong>AI/ML Models:</strong> Proficient in developing, fine-tuning, and deploying models like Transformers, LLMs, and recommendation engines.</li>
-    <li><strong>Generative AI:</strong> Innovating with generative models to unlock creative business solutions and efficiencies.</li>
-    <li><strong>Data Engineering:</strong> Designing robust data pipelines and architectures to handle diverse datasets efficiently.</li>
-    <li><strong>Cloud & MLOps:</strong> Skilled in tools such as Docker, Kubernetes, Airflow, and leveraging cloud platforms like AWS, Azure, and Google Cloud for seamless deployments.</li>
-    <li><strong>Innovation Strategy:</strong> Aligning technological advancements with business goals to ensure measurable outcomes.</li>
-    <li><strong>Mentorship:</strong> Guiding teams through knowledge-sharing, problem-solving, and collaborative development.
-    </li>
-  </ul>
-</section>
+        <!-- About Section (Placed First) -->
+        <section id="about" class="pb-24 border-t border-stone-300/60 pt-16">
+            <h2 class="text-xs font-semibold tracking-widest text-stone-500 uppercase mb-8">About</h2>
+            
+            <div class="prose prose-stone max-w-none text-stone-700 leading-relaxed space-y-6 text-sm md:text-base">
+                <p>
+                    I have spent the last 14 years trying to understand how machine learning systems behave when brought face-to-face with real-world complexity. My background started in chemical engineering and mathematical modeling at Pune University, where I first developed an appreciation for stochastic optimization and probabilistic reasoning.
+                </p>
+                <p>
+                    Today, I lead an applied AI science team at <span class="font-medium text-stone-900">Verizon</span>, working alongside engineers and researchers on problems in customer personalization, agentic shopping architectures, and real-time ranking models. Prior to this, I spent several years at <span class="font-medium text-stone-900">PwC Labs</span> and <span class="font-medium text-stone-900">Accenture Research</span>, exploring document intelligence, multi-agent frameworks, and probabilistic sequence models—one of which turned into a humble US patent for hybrid AI processing.
+                </p>
+                <p>
+                    I find quantitative finance to be one of the cleanest grounds for testing ML hypotheses because financial markets relentlessly penalize overfitting. Building models for <span class="font-medium text-stone-900">Numerai</span> and <span class="font-medium text-stone-900">CrunchDAO</span> keeps me curious about signal design, meta-learning, and non-stationary distribution shifts.
+                </p>
+                <p>
+                    I am also a strong believer in open research, FOSS, and community building. As an ambassador for the global Quant Club initiative and an active participant in tech upskilling efforts, I enjoy sharing what I learn along the way and learning from the broader engineering community.
+                </p>
+            </div>
+        </section>
 
-<section id="achievements" class="container">
-  <h2>Achievements</h2>
-  <ul>
-    <li>Awarded a US Patent for a hybrid AI mechanism in document processing (2022).</li>
-    <li>Published a conference paper on race detection using face embeddings and CNNs (2021).</li>
-    <li>Hackathon finalist for a real-time sentiment detection system.</li>
-    <li>Successfully implemented a GenAI-based Contract Analysis Automation system, cutting audit times by 71% and enhancing process efficiency.</li>
-    <li>Designed and developed an Enterprise Spend Analytics Platform leveraging GenAI, achieving unparalleled category prediction accuracy compared to leading domain products.</li>
-  </ul>
-</section>
+        <!-- Writing Section -->
+        <section id="writing" class="pb-24 border-t border-stone-300/60 pt-16">
+            <h2 class="text-xs font-semibold tracking-widest text-stone-500 uppercase mb-10">Selected Essays</h2>
+            
+            <div class="flex flex-col gap-10">
+                <!-- Article 1 -->
+                <article class="group flex flex-col sm:flex-row gap-2 sm:gap-8 items-start sm:items-baseline cursor-pointer">
+                    <time class="text-xs text-stone-500 w-28 shrink-0 tabular-nums">Sep 2026</time>
+                    <div>
+                        <h3 class="text-base font-medium text-stone-900 group-hover:underline underline-offset-4 decoration-1 transition-all">
+                            Observations on Moving from Task Bots to Skill-Based Sub-Agents
+                        </h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed text-sm">
+                            Lessons learned while redesigning conversational flows into orchestrator-led agent architectures using Google ADK and LangGraph.
+                        </p>
+                    </div>
+                </article>
 
-<section id="activities" class="container">
-  <h2>Extracurricular Activities</h2>
-  <ul>
-    <li>Active participant in tech communities, mentoring aspiring engineers, and sharing insights on AI and ML.</li>
-    <li>Enjoy trekking, which fuels my creativity and problem-solving mindset.</li>
-    <li>Engage in career counseling to help individuals navigate the evolving tech landscape.</li>
-    <li>Recognized in early years with accolades such as District Science Quiz Winner and World Environment Day Elocution Runner-up.</li>
-  </ul>
-</section>
+                <!-- Article 2 -->
+                <article class="group flex flex-col sm:flex-row gap-2 sm:gap-8 items-start sm:items-baseline cursor-pointer">
+                    <time class="text-xs text-stone-500 w-28 shrink-0 tabular-nums">Aug 2026</time>
+                    <div>
+                        <h3 class="text-base font-medium text-stone-900 group-hover:underline underline-offset-4 decoration-1 transition-all">
+                            Tuning Ranking Models Under Low Latency Budgets
+                        </h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed text-sm">
+                            A modest investigation into balancing feature expansion, top-1 hit rates, and NDCG@3 metrics within tight real-time constraints.
+                        </p>
+                    </div>
+                </article>
 
-<section id="contact" class="container">
-  <h2>Contact</h2>
-  <ul class="list-inline">
-    <li><a href="https://www.linkedin.com/in/anandi89" target="_blank" class="btn btn-primary"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-    <li><a href="https://github.com/anandi1989" target="_blank" class="btn btn-dark"><i class="fa fa-github"></i> GitHub</a></li>
-    <li><a href="mailto:amit.nandi[at]example[dot]com" class="btn btn-info"><i class="fa fa-envelope"></i> Email</a></li>
-  </ul>
-</section>
+                <!-- Article 3 -->
+                <article class="group flex flex-col sm:flex-row gap-2 sm:gap-8 items-start sm:items-baseline cursor-pointer">
+                    <time class="text-xs text-stone-500 w-28 shrink-0 tabular-nums">Jul 2026</time>
+                    <div>
+                        <h3 class="text-base font-medium text-stone-900 group-hover:underline underline-offset-4 decoration-1 transition-all">
+                            What Obfuscated Financial Data Teaches Us About Overfitting
+                        </h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed text-sm">
+                            Why competing on Numerai and CrunchDAO forces better regularization discipline than traditional tabular ML benchmarks.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<footer class="text-center">
-  <p>&copy; 2025 Amit Nandi. All Rights Reserved.</p>
-</footer>
+        <!-- Notes / Working Papers Section -->
+        <section id="notes" class="pb-24 border-t border-stone-300/60 pt-16">
+            <h2 class="text-xs font-semibold tracking-widest text-stone-500 uppercase mb-10">Short Notes & Experiments</h2>
+            
+            <div class="space-y-8">
+                <!-- Note 1 -->
+                <div class="border-l-2 border-stone-300 pl-4 py-1">
+                    <span class="text-xs text-stone-500 block mb-1">Aug 14, 2026 &middot; Research Note</span>
+                    <h4 class="text-sm font-medium text-stone-900">On Routing Precision in Multi-Agent Systems</h4>
+                    <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+                        LLM intent classifiers often struggle when two agent skills share adjacent taxonomy boundaries. Pre-filtering tool definitions before routing usually yields better latency and lower token burn than prompting a single mega-orchestrator.
+                    </p>
+                </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <!-- Note 2 -->
+                <div class="border-l-2 border-stone-300 pl-4 py-1">
+                    <span class="text-xs text-stone-500 block mb-1">Jun 28, 2026 &middot; Practical ML</span>
+                    <h4 class="text-sm font-medium text-stone-900">Why Baseline Linear Models Still Save Time</h4>
+                    <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+                        Before setting up a complex gradient boosted tree or neural ranker, a simple regularized logistic regression or Naive Bayes baseline almost always reveals data quality issues faster than deep diagnostics.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-stone-300/60">
+        <div class="max-w-2xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone-500">
+            <div>&copy; 2026 Amit Nandi</div>
+            <div class="flex gap-4">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-stone-900 transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/anandi1989" target="_blank" rel="noopener noreferrer" class="hover:text-stone-900 transition-colors">LinkedIn</a>
+                <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="hover:text-stone-900 transition-colors">Kaggle</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
